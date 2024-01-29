@@ -13,11 +13,11 @@ export const routes: Routes = [
     children: [
       {
         path: 'expenses',
-        loadComponent: () => import('./views/expenses/expenses.page').then(m => m.ExpensesPage)
+        loadChildren: () => import('./views/expenses/expenses.routes').then(mod => mod.EXPENSES_ROUTES),
       },
       {
         path: 'loans',
-        loadComponent: () => import('./views/loans/loans.page').then(m => m.LoansPage)
+        loadChildren: () => import('./views/loans/loans.routes').then(mod => mod.EXPENSES_ROUTES)
       },
     ],
   }
