@@ -3,8 +3,7 @@ import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-expenses',
-  templateUrl: './expenses.page.html',
-  styleUrls: ['./expenses.page.scss'],
+  template: `<ion-router-outlet></ion-router-outlet>`,
   standalone: true,
   imports: [IonicModule]
 })

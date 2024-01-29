@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-header',
+  selector: 'finance-header',
   template: `
     <ion-header [translucent]="true">
       <ion-toolbar>
