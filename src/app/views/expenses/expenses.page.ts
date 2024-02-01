@@ -1,17 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { card } from 'ionicons/icons';
+import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @Component({
   selector: 'app-expenses',
-  template: `<ion-router-outlet></ion-router-outlet>`,
+  template: `
+    <finance-header> Gastos </finance-header>
+
+    <ion-content>
+      <ion-tabs>
+        <ion-tab-bar slot="top">
+          <ion-tab-button tab="overhead"> Generales </ion-tab-button>
+          <ion-tab-button tab="fixed"> Fijos </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-content>
+  `,
   standalone: true,
-  imports: [IonicModule]
+  imports: [IonicModule, HeaderComponent],
 })
 export class ExpensesPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
+    addIcons({ card });
   }
 
+  ngOnInit() {}
 }

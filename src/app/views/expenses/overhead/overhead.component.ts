@@ -7,12 +7,10 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
   templateUrl: './overhead.component.html',
   styleUrls: ['./overhead.component.scss'],
   standalone: true,
-  imports: [IonicModule, HeaderComponent]
+  imports: [IonicModule, HeaderComponent],
 })
-export class OverheadComponent  implements OnInit {
-
-  constructor() { }
+export class OverheadComponent implements OnInit {
+  constructor() {}
 
   ngOnInit() {}
-
 }
