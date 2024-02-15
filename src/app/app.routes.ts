@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomePage } from './views/home/home.page';
+import { AppComponent } from './app.component';
 
 export const routes: Routes = [
   {
@@ -9,7 +9,6 @@ export const routes: Routes = [
   },
   {
     path: '',
-    component: HomePage,
     children: [
       {
         path: 'expenses',
@@ -22,3 +21,4 @@ export const routes: Routes = [
     ],
   }
 ];
+ 

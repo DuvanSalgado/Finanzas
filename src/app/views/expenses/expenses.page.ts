@@ -8,12 +8,12 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
   selector: 'app-expenses',
   template: `
     <finance-header> Gastos </finance-header>
-
     <ion-content>
       <ion-tabs>
         <ion-tab-bar slot="top">
           <ion-tab-button tab="overhead"> Generales </ion-tab-button>
           <ion-tab-button tab="fixed"> Fijos </ion-tab-button>
+          <ion-tab-button tab="category"> Categiria </ion-tab-button>
         </ion-tab-bar>
       </ion-tabs>
     </ion-content>

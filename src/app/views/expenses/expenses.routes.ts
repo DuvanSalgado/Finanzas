@@ -4,7 +4,7 @@ import { ExpensesPage } from "./expenses.page";
 export const EXPENSES_ROUTES: Route[] = [
   {
     path: '',
-    redirectTo: '',
+    redirectTo: 'overhead',
     pathMatch: 'full',
   },
   {
@@ -12,11 +12,15 @@ export const EXPENSES_ROUTES: Route[] = [
     children: [
       {
         path: 'overhead',
-        loadComponent: () => import('./overhead/overhead.component').then(m => m.OverheadComponent)
+        loadComponent: () => import('./pages/overhead/overhead.component').then(m => m.OverheadComponent)
       },
       {
         path: 'fixed',
-        loadComponent: () => import('./fixed-expenses/fixed-expenses.component').then(m=> m.FixedExpensesComponent)
+        loadComponent: () => import('./pages/fixed-expenses/fixed-expenses.component').then(m=> m.FixedExpensesComponent)
+      },
+      {
+        path: 'category',
+        loadComponent: () => import('./pages/category-expenses/category-expenses.component').then(m=> m.CategoryExpensesComponent)
       }
     ]
   }
