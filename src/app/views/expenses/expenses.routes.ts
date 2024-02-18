@@ -12,15 +12,15 @@ export const EXPENSES_ROUTES: Route[] = [
     children: [
       {
         path: 'overhead',
-        loadComponent: () => import('./pages/overhead/overhead.component').then(m => m.OverheadComponent)
+        loadComponent: () => import('./pages/overhead/overhead.page').then(m => m.OverheadPage)
       },
       {
         path: 'fixed',
-        loadComponent: () => import('./pages/fixed-expenses/fixed-expenses.component').then(m=> m.FixedExpensesComponent)
+        loadComponent: () => import('./pages/fixed-expenses/fixed-expenses.page').then(m=> m.FixedExpensesPage)
       },
       {
         path: 'category',
-        loadComponent: () => import('./pages/category-expenses/category-expenses.component').then(m=> m.CategoryExpensesComponent)
+        loadComponent: () => import('./pages/category-expenses/category-expenses.page').then(m=> m.CategoryExpensesPage)
       }
     ]
   }
