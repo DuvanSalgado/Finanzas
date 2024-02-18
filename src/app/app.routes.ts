@@ -8,17 +8,20 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: '',
-    children: [
-      {
-        path: 'expenses',
-        loadChildren: () => import('./views/expenses/expenses.routes').then(mod => mod.EXPENSES_ROUTES),
-      },
-      {
-        path: 'loans',
-        loadChildren: () => import('./views/loans/loans.routes').then(mod => mod.EXPENSES_ROUTES)
-      },
-    ],
-  }
+    path: 'expenses',
+    loadChildren: () =>
+      import('./views/expenses/expenses.routes').then(
+        (mod) => mod.EXPENSES_ROUTES
+      ),
+  },
+  {
+    path: 'loans',
+    loadChildren: () =>
+      import('./views/loans/loans.routes').then((mod) => mod.EXPENSES_ROUTES),
+  },
+  {
+    path: 'config',
+    loadChildren: () =>
+      import('./views/config/config.routing').then((mod) => mod.CONFIG_ROUTES),
+  },
 ];
- 

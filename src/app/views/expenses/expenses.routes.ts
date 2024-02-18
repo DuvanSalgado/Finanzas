@@ -1,5 +1,5 @@
-import { Route } from "@angular/router";
-import { ExpensesPage } from "./expenses.page";
+import { Route } from '@angular/router';
+import { ExpensesPage } from './expenses.page';
 
 export const EXPENSES_ROUTES: Route[] = [
   {
@@ -8,20 +8,28 @@ export const EXPENSES_ROUTES: Route[] = [
     pathMatch: 'full',
   },
   {
-    path: '', component: ExpensesPage,
+    path: '',
+    component: ExpensesPage,
     children: [
       {
         path: 'overhead',
-        loadComponent: () => import('./pages/overhead/overhead.page').then(m => m.OverheadPage)
+        loadComponent: () =>
+          import('./pages/overhead/overhead.page').then((m) => m.OverheadPage),
       },
       {
         path: 'fixed',
-        loadComponent: () => import('./pages/fixed-expenses/fixed-expenses.page').then(m=> m.FixedExpensesPage)
+        loadComponent: () =>
+          import('./pages/fixed-expenses/fixed-expenses.page').then(
+            (m) => m.FixedExpensesPage
+          ),
       },
       {
         path: 'category',
-        loadComponent: () => import('./pages/category-expenses/category-expenses.page').then(m=> m.CategoryExpensesPage)
-      }
-    ]
-  }
-];  
+        loadComponent: () =>
+          import('./pages/category-expenses/category-expenses.page').then(
+            (m) => m.CategoryExpensesPage
+          ),
+      },
+    ],
+  },
+];

@@ -1,8 +1,21 @@
 <ion-menu side="end" contentId="main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
+      <ion-title>Configuración</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">This is the menu content.</ion-content>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <a [routerLink]="['/config/categoty']">
+        <ion-item>
+          <ion-label>Categorias</ion-label>
+        </ion-item>
+      </a>
+      <a [routerLink]="['/config/paymentMetods']">
+        <ion-item>
+          <ion-label>Metodos de pago</ion-label>
+        </ion-item>
+      </a>
+    </ion-list>
+  </ion-content>
 </ion-menu>

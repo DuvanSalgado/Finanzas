@@ -6,7 +6,8 @@ import { MenuComponent } from './components/menu/menu.component';
 @Component({
   selector: 'app-root',
   template: `
-    <ion-app id="main-content">
+    <ion-app>
+      <div id="main-content"></div>
       <finance-menu></finance-menu>
       <finance-footer></finance-footer>
     </ion-app>
