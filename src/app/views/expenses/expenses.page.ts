@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderComponent } from '@components/header/header.component';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { card } from 'ionicons/icons';
-import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @Component({
   selector: 'app-expenses',

@@ -7,16 +7,21 @@ export const CONFIG_ROUTES: Route[] = [
     component: ConfigPage,
     children: [
       {
-        path: 'paymentMetods',
+        path: 'category',
+        loadComponent: () =>
+          import('./pages/category/category.page').then((m) => m.CaregoryPage),
+      },
+      {
+        path: 'paymentMethods',
         loadComponent: () =>
           import('./pages/payment-methods/payment-methods.page').then(
             (m) => m.PaymentMethodsPage
           ),
       },
       {
-        path: 'categoty',
-        loadComponent: () =>
-          import('./pages/category/category.page').then((m) => m.CaregoryPage),
+        path: '',
+        redirectTo: 'category',
+        pathMatch: 'full',
       },
     ],
   },

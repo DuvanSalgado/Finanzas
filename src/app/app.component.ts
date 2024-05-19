@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
-import { FooterComponent } from './components/footer/footer.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { IonRouterOutlet } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
+import { MenuComponent } from '@components/menu/menu.component';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,11 @@ import { MenuComponent } from './components/menu/menu.component';
     <ion-app>
       <div id="main-content"></div>
       <finance-menu></finance-menu>
-      <finance-footer></finance-footer>
+      <ion-router-outlet></ion-router-outlet>
     </ion-app>
   `,
   standalone: true,
-  imports: [IonApp, IonRouterOutlet, FooterComponent, MenuComponent],
+  imports: [IonRouterOutlet, MenuComponent, IonicModule],
 })
 export class AppComponent {
   constructor() {}

@@ -6,23 +6,17 @@ import { IonicModule } from '@ionic/angular';
   template: `
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="expenses">
-          Gastos
-        </ion-tab-button>
-        <ion-tab-button tab="loans">
-          Prestamos
-        </ion-tab-button>
+        <ion-tab-button tab="expenses"> Gastos </ion-tab-button>
+        <ion-tab-button tab="loans"> Prestamos </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
   `,
   styleUrls: ['./footer.component.scss'],
   standalone: true,
-  imports: [IonicModule]
+  imports: [IonicModule],
 })
 export class FooterComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() { }
-
+  ngOnInit() {}
 }

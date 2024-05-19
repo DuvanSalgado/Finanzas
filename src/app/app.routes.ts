@@ -1,23 +1,31 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'expenses',
-    pathMatch: 'full',
-  },
-  {
-    path: 'expenses',
-    loadChildren: () =>
-      import('./views/expenses/expenses.routes').then(
-        (mod) => mod.EXPENSES_ROUTES
+    loadComponent: () =>
+      import('@components/footer/footer.component').then(
+        (m) => m.FooterComponent
       ),
-  },
-  {
-    path: 'loans',
-    loadChildren: () =>
-      import('./views/loans/loans.routes').then((mod) => mod.EXPENSES_ROUTES),
+    children: [
+      {
+        path: 'expenses',
+        loadChildren: () =>
+          import('./views/expenses/expenses.routes').then(
+            (mod) => mod.EXPENSES_ROUTES
+          ),
+      },
+      {
+        path: 'loans',
+        loadComponent: () =>
+          import('./views/loans/loans.page').then((m) => m.LoansPage),
+      },
+      {
+        path: '',
+        redirectTo: 'expenses',
+        pathMatch: 'full',
+      },
+    ],
   },
   {
     path: 'config',
