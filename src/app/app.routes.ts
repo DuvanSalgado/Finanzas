@@ -3,10 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () =>
-      import('@components/footer/footer.component').then(
-        (m) => m.FooterComponent
-      ),
+    loadComponent: () => import('@footer').then((m) => m.FooterComponent),
     children: [
       {
         path: 'expenses',

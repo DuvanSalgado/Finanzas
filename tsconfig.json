@@ -21,7 +21,11 @@
     "lib": ["es2018", "dom"],
     "useDefineForClassFields": false,
     "paths": {
-      "@components/*": ["src/app/views/components/*"]
+      "@header": ["src/app/views/components/header/header.component"],
+      "@footer": ["src/app/views/components/footer/footer.component"],
+      "@menu": ["src/app/views/components/menu/menu.component"],
+      "@expensesComponents/*": ["src/app/views/expenses/components/*"]
+      
     }
   },
   "angularCompilerOptions": {

@@ -8,13 +8,8 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './fixed-expenses.page.html',
   styleUrls: ['./fixed-expenses.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule],
 })
-export class FixedExpensesPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class FixedExpensesPage {
+  constructor() {}
 }

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from '@components/header/header.component';
+import { HeaderComponent } from '@header';
 import { IonicModule } from '@ionic/angular';
-import { addIcons } from 'ionicons';
-import { card } from 'ionicons/icons';
 
 @Component({
   selector: 'app-expenses',
@@ -22,9 +20,7 @@ import { card } from 'ionicons/icons';
   imports: [IonicModule, HeaderComponent],
 })
 export class ExpensesPage implements OnInit {
-  constructor() {
-    addIcons({ card });
-  }
+  constructor() {}
 
   ngOnInit() {}
 }

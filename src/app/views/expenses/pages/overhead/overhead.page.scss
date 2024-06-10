@@ -1,16 +1,3 @@
-.carrusel {
-  display: flex;
-  width: 100vw;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-
-  .slides {
-    display: flex;
-    gap: 5px;
-  }
-
-  .item {
-    width: 344px;
-    scroll-snap-align: start;
-  }
+.action {
+    display: inline-flex;
 }
